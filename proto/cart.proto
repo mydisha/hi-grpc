@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package proto;
+
+message Cart {
+    string name = 1;
+    string status = 2;
+    map<string, string> projects = 3;
+}
+
+service CartService {
+    rpc InsertCart (Cart) returns (Cart) {
+    }
+}

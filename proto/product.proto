@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package proto;
+
+message Product {
+    string name = 1;
+    int32 price = 2;
+    string image = 3;
+}
+
+service ProductService {
+    rpc InsertProduct (Product) returns (Product) {
+    }
+}
